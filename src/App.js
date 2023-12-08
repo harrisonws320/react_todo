@@ -4,13 +4,13 @@ import './App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Login from './components/Login';
-import Todos from './components/Todos';
-import Categories from './components/Categories';
-import Bootstrap from './components/Bootstrap';
-import NotFound from './components/NotFound';
+import Login from './components/Auth/Login';
+import Todos from './components/Resources/Todos';
+import Categories from './components/Categories/Categories'
+import About from './components/About/About';
+import NotFound from './components/NotFound/NotFound';
 import AuthProvider from './contexts/AuthContext';
-import Logout from './components/Logout';
+// import Logout from './components/Auth/Logout';
 import ProtectedRoute from './components/ProtectedRoute'
 
 
@@ -25,11 +25,12 @@ export default function App() {
       <Navigation />
       {/* Routes is like a switch that defines each individual Route */}
       <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/todos' element={<Todos />} />
-        <Route path='/categories' element={<Categories />} />
-        <Route path='/bootstrap' element={<Bootstrap />} />
-        <Route path='/logout' element={ <Logout /> } />
+        <Route path='/' element={<ProtectedRoute><Todos /></ProtectedRoute>} />
+        <Route path='/todos' element={<ProtectedRoute><Todos /></ProtectedRoute>} />
+        <Route path='/categories' element={<ProtectedRoute><Categories /></ProtectedRoute>} />
+        <Route path='/about' element={<About />} />
+        <Route path='/login' element={<Login />} />
+        {/* <Route path='/logout' element={ <Logout /> } /> */}
         <Route path='/routing' element={ <ProtectedRoute></ProtectedRoute> } />
         {/* The NotFound component will be an error handler (page showing a nice message) and will be tied to any other Route than what 
         is detailed above. All routes listed above this Route will have very specific paths that are listed for them. This Route will be 

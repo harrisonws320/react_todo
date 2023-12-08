@@ -1,7 +1,7 @@
 import React from 'react'
 //Each time we import a value from our context, we need 3 steps:
 //STEP 1 - Import useAuth from the AuthContext
-import { useAuth } from '../contexts/AuthContext'
+import { useAuth } from '../../contexts/AuthContext'
 //Below we bring in some UI components from react-bootstrap
 import { Container, Card } from 'react-bootstrap'
 //The function useNavigate below allows us to redirect a user with react-router-dom
