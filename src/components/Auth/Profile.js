@@ -2,7 +2,7 @@ import React from 'react'
 // we need to reference the Auth.css file (we made that style sheet to modify the image)
 // import './Auth.css'
 import { useAuth } from '../../contexts/AuthContext'
-
+import './Profile.css'
 
 export default function Profile() {
   const { currentUser } = useAuth()

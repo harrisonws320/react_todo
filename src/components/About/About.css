@@ -1,0 +1,32 @@
+.text-center {
+ 
+    text-align: center;
+}
+
+.custom-heading {
+    font-family: "Bahnschrift", sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color:#c31919;
+}
+
+h2 {
+    font-size: 30px; 
+  }
+  
+  p {
+    font-size: 23px; 
+    text-align: left;
+    text-indent: 30px;
+  }
+  
+  strong {
+    font-size: 23px; 
+  }
+
+  
+  .red-container {
+    background-color: red; /* Set the background color to red */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+    /* Add any other styling properties you want for the red container */
+  }

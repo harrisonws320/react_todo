@@ -17,7 +17,7 @@ export default function Logout() {
       <div className='logout text-center p-3 bg-dark text-white'>
         {/* BELOW we render Profile from Profile.js */}
         <Profile />
-        <button className="btn btn-info" onClick={() => handleAuth()}>
+        <button className="btn btn-danger text-white" onClick={() => handleAuth()}>
             Logout
         </button> 
       </div>

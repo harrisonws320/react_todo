@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 //we installed axios to manage API requests with npm + install + axios
 import axios from 'axios'
 //Below we use the default import syntax for react-bootstrap Container
-import Container from 'react-bootstrap/Container'
+// import Container from 'react-bootstrap/Container'
 import SingleCategory from './SingleCategory';
-
+import { Container, Table } from 'react-bootstrap'
 //the imports below are for creating functionality:
 import { useAuth } from '../../contexts/AuthContext';
 import CatCreate from './CatCreate';
@@ -51,21 +51,23 @@ useEffect(() => {
 
   return (
     <section className="categories">
-        <article className="bg-info p-5">
-            <h1 className='text-center'>Categories Dashboard</h1>
-        </article>
+       <article className="bg-light p-5">
+        <h1 className='text-center'>
+          <span className='custom-heading'>Categories Dashboard</span>
+          </h1>
+    </article>
     {/* BEGIN CREATE UI */}
         {currentUser.email === process.env.REACT_APP_ADMIN_EMAIL &&
           <div className="bg-dark p-2 mb-3 text-center">
             {showCreate ?
               <>
-                <button onClick={() => setShowCreate(false)} className="btn btn-warning">
+                <button onClick={() => setShowCreate(false)} className="btn btn-danger text-white p-3 mb-3">
                     Cancel
                 </button>
                 <CatCreate getCategories={getCategories} setShowCreate={setShowCreate} />
               </> :
-              <button onClick={() => setShowCreate(true)} className="btn btn-info">
-                Create Category
+              <button onClick={() => setShowCreate(true)} className="btn btn-danger text-white p-3 mb-3">
+                Create New Category
               </button>
             }
           </div>
@@ -73,8 +75,8 @@ useEffect(() => {
     {/* END CREATE UI */}
 
     <Container className='p-2'>
-        <table className="table table-dark bg-info my-3">
-            <thead className="table-secondary text-uppercase">
+    <Table className="table table-dark bg-info my-3">
+            <thead>
                 <tr>
                     <th>Name</th>
                     <th>Description</th>
@@ -93,7 +95,7 @@ useEffect(() => {
                 />
                     )}
             </tbody>
-        </table>
+            </Table>
     </Container>
     </section>
   )

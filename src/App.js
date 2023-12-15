@@ -1,17 +1,17 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Login from './components/Auth/Login';
-import Todos from './components/Resources/Todos';
+import AuthProvider from './contexts/AuthContext'
+import Navigation from './components/Navigation'
+import ToDos from './components/ToDos/ToDos';
 import Categories from './components/Categories/Categories'
-import About from './components/About/About';
-import NotFound from './components/NotFound/NotFound';
-import AuthProvider from './contexts/AuthContext';
-// import Logout from './components/Auth/Logout';
-import ProtectedRoute from './components/ProtectedRoute'
+import About from './components/About/About'
+import Login from './components/Auth/Login'
+import NotFound from './components/NotFound/NotFound'
+import Footer from './components/Footer'
+import ProtectedRoute from './components/ProtectedRoute';
+
 
 
 export default function App() {
@@ -25,8 +25,8 @@ export default function App() {
       <Navigation />
       {/* Routes is like a switch that defines each individual Route */}
       <Routes>
-        <Route path='/' element={<ProtectedRoute><Todos /></ProtectedRoute>} />
-        <Route path='/todos' element={<ProtectedRoute><Todos /></ProtectedRoute>} />
+        <Route path='/' element={<ProtectedRoute><ToDos /></ProtectedRoute>} />
+        <Route path='/todos' element={<ProtectedRoute><ToDos /></ProtectedRoute>} />
         <Route path='/categories' element={<ProtectedRoute><Categories /></ProtectedRoute>} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<Login />} />
@@ -37,10 +37,10 @@ export default function App() {
         a catch all for the rest of what could be in the path */}
         <Route path='*' element={<NotFound />} />
       </Routes>
+    <Footer />
     </BrowserRouter>
     </AuthProvider>
     {/* Below is our footer component  */}
-    {/* <Footer /> */}
     </div>
 
   )

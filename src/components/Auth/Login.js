@@ -26,16 +26,16 @@ return navigate('/')
 return (
 //STEP 3 - Implement the AuthContext object(s) in our component's UI
     <div className='login'>
-        <article className="bg-info mb-5 p-5 text-dark">
-            <h1 className="text-center">Welcom to ReactToDoApp!</h1>
+        <article className="bg-danger mb-5 p-5 text-white">
+            <h1 className="text-center" style={{ fontFamily: '"Bahnschrift", sans-serif' }}>Welcome to my ReactToDo App</h1>
         </article>
         <Container>
             <Card className='m-2 border-dark text-center'>
                 <Card.Header classname='bg-dark-text-white'>
-                    <h2>Login to Knock Some Items Off the ToDO List!</h2>
+                    <h2>Login to Knock Some Items off the ToDo List!</h2>
                 </Card.Header>
                 <Card.Body>
-                    <button className='btn btn-success' onClick={() => handleAuth()}>
+                    <button className='btn btn-danger' onClick={() => handleAuth()}>
                         Login with Github
                     </button>
                 </Card.Body>

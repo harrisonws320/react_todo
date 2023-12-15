@@ -66,8 +66,8 @@ export default function CatForm(props) {
                   }
                 </div>
                 <div className='form-group m-1'>
-                    <button type='submit' className='btn btn-success'>
-                        Submit Category to API
+                    <button type='submit' className='btn btn-danger'>
+                        Create New Category
                     </button>
 
                 </div>
