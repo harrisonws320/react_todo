@@ -27,7 +27,7 @@ return (
 //STEP 3 - Implement the AuthContext object(s) in our component's UI
     <div className='login'>
         <article className="bg-danger mb-5 p-5 text-white">
-            <h1 className="text-center" style={{ fontFamily: '"Bahnschrift", sans-serif' }}>Welcome to my ReactToDo App</h1>
+            <h1 className="text-center" style={{ fontFamily: '"Bahnschrift", sans-serif' }}>Welcome to my React ToDo App</h1>
         </article>
         <Container>
             <Card className='m-2 border-dark text-center'>

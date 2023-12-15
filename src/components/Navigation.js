@@ -15,7 +15,7 @@ export default function Navigation() {
   return (
     <Navbar bg='dark' data-bs-theme='dark' className='p-3' expand='md'>
     <Navbar.Brand href='/' style={{ fontFamily: '"Bahnschrift", sans-serif' }}>
-      ToDoApp
+      My React "ToDo" App
     </Navbar.Brand>
     <Navbar.Toggle />  
     <Navbar.Collapse className='justify-content-end'>
